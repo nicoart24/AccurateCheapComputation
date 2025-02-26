@@ -1,4 +1,138 @@
-html {
-  height: 100%;
-  width: 100%;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #aff58a; /* Colore nero per lo sfondo */
+  color: #0f0b0b; /* Colore bianco per il testo */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Posiziona gli elementi in colonna */
+  height: 100vh;
 }
+
+.container {
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+}
+
+ul {
+  list-style: none; /* Rimuove i bullet */
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 30%; /* Assicura che l'immagine non superi il 30% della larghezza */
+  margin-bottom: 20px; /* Spazio tra il logo e il titolo */
+}
+
+h1 {
+  color: #090b0b; /* Colore bianco per l'intestazione */
+  font-size: 36px; /* Dimensione del carattere per l'intestazione */
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 20px;
+  line-height: 1.5; /* Migliore leggibilità */
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #110e0e;
+}
+
+button {
+  background-color: #27d33b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px 0; /* Spazio verticale tra i bottoni */
+  width: 100%; /* Per uniformare la dimensione dei bottoni */
+  max-width: 300px; /* Dimensione massima dei bottoni */
+}
+
+button:hover {
+  background-color: #2f5304;
+}
+
+@media only screen and (max-width: 600px) {
+  img {
+      max-width: 80%; /* Riduce il logo su schermi piccoli */
+  }
+
+  button {
+      font-size: 14px; /* Riduce leggermente la dimensione del testo nei bottoni */
+  }
+}
+
+/*
+CSS (Cascading Style Sheets) - Guida di riferimento
+
+I CSS sono utilizzati per definire lo stile e la presentazione di un documento HTML.
+Questo file contiene le regole CSS che determinano l'aspetto degli elementi della pagina web.
+
+Struttura di una regola CSS:
+
+selettore {
+    proprietà: valore;
+    proprietà: valore;
+}
+
+- Il "selettore" identifica gli elementi HTML a cui applicare lo stile.
+- Le "proprietà" definiscono gli aspetti visivi (es. colore, dimensione, margini).
+- I "valori" specificano le impostazioni per ciascuna proprietà.
+
+Esempio:
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+In questo esempio, il selettore `body` applica uno stile a tutto il contenuto della pagina:
+- Il font di default è Arial (o un font sans-serif di riserva).
+- Lo sfondo è di colore grigio chiaro (#f0f0f0).
+- Il colore del testo è grigio scuro (#333).
+
+Selettori comuni:
+
+- Tag HTML: `h1`, `p`, `div`, ecc.
+- Classi: `.nome-classe` (es. `.container`)
+- ID: `#nome-id` (es. `#header`)
+- Pseudo-classi: `:hover`, `:focus`, `:nth-child()`, ecc.
+
+Best practice:
+
+1. Usa classi per stili riutilizzabili e ID per elementi unici.
+2. Evita di usare stili inline (nell'HTML) per mantenere il codice pulito e separato.
+3. Organizza il codice in sezioni logiche (es. reset, layout, componenti).
+4. Commenta il codice per spiegare sezioni complesse o scelte specifiche.
+5. Usa unità relative (es. `em`, `rem`, `%`) per garantire la scalabilità.
+
+Esempio di organizzazione del file:
+
+/* Reset CSS */
+body, h1, p { margin: 0; padding: 0; }
+
+/* Layout */
+.container { width: 80%; margin: 0 auto; }
+
+/* Componenti */
+.button { background-color: #007bff; color: white; padding: 10px 20px; }
+
+/* Media Queries */
+@media (max-width: 768px) { ... }
+
+Per ulteriori informazioni, consulta la documentazione ufficiale:
+https://developer.mozilla.org/en-US/docs/Web/CSS

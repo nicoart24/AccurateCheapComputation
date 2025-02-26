@@ -1,0 +1,83 @@
+/* Navbar responsive */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.hamburger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        background-color: #333;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    #menu-toggle:checked + .nav-links {
+        display: flex;
+    }
+}
+
+/* Immagini responsive */
+.full-width {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.image-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.half-width {
+    width: calc(50% - 10px);
+    height: auto;
+}
+
+.third-width {
+    width: calc(33.33% - 10px);
+    height: auto;
+}
+
+/* Media query per schermi piccoli */
+@media (max-width: 768px) {
+    .half-width,
+    .third-width {
+        width: 100%;
+    }
+}

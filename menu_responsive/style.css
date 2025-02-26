@@ -1,0 +1,91 @@
+/* Stile generale */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #5f5858; /* Colore nero di base */
+    color: white;
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1c1c1c;
+}
+
+/* Menù in modalità desktop (di default) */
+.nav-links {
+    display: flex; /* Mostra il menù per schermi grandi */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Stile per l'icona hamburger */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Bottone Cambia Sfondo */
+button {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Query per schermi piccoli */
+@media (max-width: 768px) {
+    /* Mostra l'icona hamburger */
+    .hamburger {
+        display: block;
+    }
+
+    /* Nascondi il menù di default su schermi piccoli */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #000000;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        width: 200px;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    /* Mostra il menù quando il checkbox è selezionato */
+    #menu-toggle:checked ~ .nav-links {
+        display: flex; /* Mostra il menù in colonna */
+    }
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immagini Responsive</title>
+    <link rel="stylesheet" href="style.css"> <!-- Collegamento al file CSS -->
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="images.html">Immagini</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Immagini Responsive</h1>
+
+        <!-- Immagine a pagina piena -->
+        <section>
+            <h2>1. Immagine a Pagina Piena</h2>
+            <img src="img/gatto2.webp" alt= "Immagine a pagina piena" class= "full-width"
+        </section>
+
+        <!-- Due immagini affiancate -->
+        <section>
+            <h2>2. Due Immagini Affiancate</h2>
+            <div class="image-row">
+                <img src="img/gatto2.webp" alt="Immagine 1" class="half-width">
+                <img src="img/gatto2.webp" alt="Immagine 2" class="half-width">
+            </div>
+        </section>
+
+        <!-- Tre immagini affiancate -->
+        <section>
+            <h2>3. Tre Immagini Affiancate</h2>
+            <div class="image-row">
+                <img src="img/gatto2.webp" alt="Immagine 1" class="third-width">
+                <img src="img/gatto2.webp"
+                alt="Immagine 2" class="third-width">
+                <img src="img/gatto2.webp" alt="Immagine 3" class="third-width">
+            </div>
+        </section>
+
+        <!-- Spiegazione -->
+        <section>
+            <h2>Spiegazione: Come gestire le immagini in HTML</h2>
+            <p>
+                In HTML, il tag <code>&lt;img&gt;</code> viene utilizzato per inserire immagini in una pagina web. 
+                Questo tag ha alcuni attributi fondamentali:
+            </p>
+            <ul>
+                <li>
+                    <strong>src:</strong> Specifica il percorso del file immagine. Ad esempio:
+                    <div style="background-color: #333; padding: 10px; border-radius: 8px; color: white; margin: 10px auto; max-width: 80%;">
+                        <pre>
+&lt;img src="img/ARTandSETUPacademy_logo.jpg" alt="Descrizione dell'immagine"&gt;
+                        </pre>
+                    </div>
+                </li>
+                <li>
+                    <strong>alt:</strong> Fornisce una descrizione testuale dell'immagine, utile per l'accessibilità e quando l'immagine non è disponibile.
+                </li>
+                <li>
+                    <strong>class:</strong> Utilizzato per applicare stili specifici tramite il CSS, come il ridimensionamento per immagini responsive.
+                </li>
+            </ul>
+            <p>
+                Per rendere le immagini responsive, è importante utilizzare il CSS. Ad esempio:
+            </p>
+            <div style="background-color: #333; padding: 10px; border-radius: 8px; color: white; margin: 10px auto; max-width: 80%;">
+                <pre>
+/* Immagine a larghezza piena */
+.full-width {
+    width: 100%; /* L'immagine occupa tutta la larghezza */
+    height: auto; /* Mantiene le proporzioni */
+}
+
+/* Due immagini affiancate */
+.half-width {
+    width: calc(50% - 10px); /* Ogni immagine occupa il 50% meno lo spazio tra loro */
+    height: auto;
+}
+
+/* Tre immagini affiancate */
+.third-width {
+    width: calc(33.33% - 10px); /* Ogni immagine occupa un terzo della larghezza */
+    height: auto;
+}
+                </pre>
+            </div>
+            <p>
+                In combinazione con le <strong>media query</strong>, possiamo adattare automaticamente il layout delle immagini per dispositivi con schermi più piccoli.
+                Ad esempio:
+            </p>
+            <div style="background-color: #333; padding: 10px; border-radius: 8px; color: white; margin: 10px auto; max-width: 80%;">
+                <pre>
+@media (max-width: 768px) {
+    .half-width,
+    .third-width {
+        width: 100%; /* Le immagini si adattano a tutta la larghezza dello schermo */
+    }
+}
+                </pre>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

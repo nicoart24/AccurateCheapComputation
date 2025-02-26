@@ -1,16 +1,52 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="it">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo o</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f4; margin: 0; padding: 0; }
+        .nav-container { position: relative; }
+        nav { background: #444; padding: 15px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; }
+        .menu { display: none; flex-direction: column; background: #444; position: absolute; top: 50px; right: 0; width: 200px; border-radius: 10px; }
+        .menu a { color: white; padding: 10px; text-decoration: none; font-weight: bold; display: block; text-align: left; }
+        .menu a:hover { background: #888; }
+        .hamburger { display: none; font-size: 30px; color: white; cursor: pointer; }
+        .button { display: inline-block; padding: 15px 25px; margin: 20px; font-size: 18px; color: white; background: #007BFF; text-decoration: none; border-radius: 8px; transition: 0.3s; }
+        .button:hover { background: #0056b3; }
+        .image-container { text-align: center; margin-top: 20px; }
+        .image-container img { width: 80%; max-width: 600px; border-radius: 10px; }
+
+        @media screen and (max-width: 768px) {
+            .hamburger { display: block; }
+            .menu { display: none; }
+            .menu.show { display: flex; }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("show");
+        }
+    </script>
 </head>
-
 <body>
-  Hello world
-  <script src="script.js"></script>
-</body>
+    <div class="nav-container">
+        <nav>
+            <span class="hamburger" onclick="toggleMenu()">☰</span>
+            <div id="menu" class="menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">Chi Siamo</a>
+                <a href="services.html">Servizi</a>
+                <a href="contact.html">Contatti</a>
+            </div>
+        </nav>
+    </div>
 
+    <h1>Benvenuto nel nostro sito demo!</h1>
+    <p>Questa è la homepage. Usa la navigazione per esplorare.</p>
+    <a href="services.html" class="button">Scopri i nostri servizi</a>
+    <div class="image-container">
+        <img src="https://via.placeholder.com/600x300" alt="Immagine demo">
+    </div>
+</body>
 </html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css"> <!-- Collegamento al file CSS principale -->
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sezione: Spiegazione del concetto di responsive -->
+        <section>
+            <h1>Cos'è il design responsive?</h1>
+            <p>
+                Il design responsive è un approccio alla progettazione di siti web che garantisce che i contenuti 
+                e il layout si adattino automaticamente a diverse dimensioni di schermo e dispositivi. 
+                Questo significa che un sito web è facilmente leggibile e navigabile sia su un computer desktop 
+                che su uno smartphone o tablet.
+            </p>
+            <p>Ecco alcune caratteristiche principali del design responsive:</p>
+            <ul>
+                <li>
+                    <strong>Adattabilità:</strong> Il layout cambia in base alle dimensioni dello schermo.
+                </li>
+                <li>
+                    <strong>Fluidità:</strong> Gli elementi si ridimensionano proporzionalmente per riempire lo spazio disponibile.
+                </li>
+                <li>
+                    <strong>Media Query:</strong> Regole CSS che definiscono stili specifici per diverse larghezze di schermo.
+                </li>
+            </ul>
+            <p>Un esempio di regola CSS con media query:</p>
+            <div style="background-color: #333; padding: 15px; border-radius: 8px; margin: 10px auto; max-width: 80%; color: white;">
+                <pre>
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Ridimensiona il testo per schermi piccoli */
+    }
+}
+                </pre>
+            </div>
+        </section>
+
+        <!-- Sezione: Spiegazione del menù responsive -->
+        <section>
+            <h2>Come funziona il menù responsive?</h2>
+            <p>
+                Un menù responsive consente agli utenti di navigare facilmente su dispositivi con schermi piccoli, 
+                come smartphone e tablet. La versione base di un menù responsive include:
+            </p>
+            <ul>
+                <li>
+                    <strong>Hamburger Menu:</strong> Un'icona (generalmente tre linee orizzontali) che, al clic, mostra o nasconde il menù.
+                </li>
+                <li>
+                    <strong>Input Checkbox:</strong> Utilizzato per gestire l'apertura e la chiusura del menù.
+                </li>
+                <li>
+                    <strong>Media Query:</strong> Nasconde il menù completo su schermi piccoli e visualizza solo l'icona hamburger.
+                </li>
+            </ul>
+            <p>Ecco un esempio semplificato di menù responsive:</p>
+            <div style="background-color: #333; padding: 15px; border-radius: 8px; margin: 10px auto; max-width: 80%; color: white;">
+                <pre>
+<nav class="navbar">
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+                </pre>
+            </div>
+            <p>Con il seguente CSS per nascondere e mostrare il menù:</p>
+            <div style="background-color: #333; padding: 15px; border-radius: 8px; margin: 10px auto; max-width: 80%; color: white;">
+                <pre>
+.hamburger {
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    #menu-toggle:checked + .nav-links {
+        display: flex;
+    }
+}
+                </pre>
+            </div>
+        </section>
+
+        <!-- Sezione: Contattaci -->
+        <section>
+            <h2>Contattaci</h2>
+            <p>
+                Per maggiori informazioni, visita la nostra pagina <a href="contact.html">Contattaci</a>.
+            </p>
+        </section>
+    </main>
+</body>
+</html>
